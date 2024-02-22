@@ -1,0 +1,30 @@
+{
+  "name": "wc-analytics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.ts",
+  "scripts": {
+    "dev": "nodemon src/server",
+    "start:ts": "ts-node src/server",
+    "build": "rm -rf ./dist && tsc --project ./",
+    "start": "node ./dist/server",
+    "start:prod": "pnpm run build && node ./dist/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "firebase-admin": "^12.0.0",
+    "node-cron": "^3.0.3",
+    "resend": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "nodemon": "^3.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
